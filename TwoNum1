@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class TwoNum1 {
+   public int num1 , num2;
+   public int sum() {
+      return num1 + num2;
+   }
+   public int difference() {
+      return num1 - num2;
+   }
+   public int product() {
+      return num1 * num2;
+   }
+   public int quotient() {
+      return num1 / num2;
+   }
+   public void displayResults() {
+      System.out.println("Sum: " +sum());
+      System.out.println("Difference: " +difference());
+      System.out.println("Product: " +product());
+      System.out.println("Quotient: " +quotient());
+   }
+   public static void main (String[] args) {
+      Scanner scan = new Scanner(System.in);
+      TwoNum1 obj = new TwoNum1();
+      
+      System.out.println("Input Integer: ");
+      obj.num1 = scan.nextInt();
+      System.out.println("Input Another Integer: ");
+      obj.num2 = scan.nextInt();
+
+      obj.displayResults(); 
+   }
+}
