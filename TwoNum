@@ -1,0 +1,42 @@
+import java.util.Scanner; // This file is more on a static
+public class TwoNum 
+{  
+   public int sum(int num1,int num2)
+   {
+      int sum = num1 + num2;
+      return sum;
+   }
+    public int difference(int num1,int num2)
+   {
+      int difference = num1 - num2;
+      return difference;
+   }
+     public int product(int num1,int num2)
+   {
+      int product = num1 * num2;
+      return product;
+   }
+     public int quotient(int num1,int num2)
+   {
+      int quotient = num1 / num2;
+      return quotient;
+   }
+   public static void display(int num1, int num2) {
+      System.out.println("The Sum of two Integers: " +sum(num1,num2));
+      System.out.println("The difference of two Integers: " +difference(num1,num2));
+      System.out.println("The product of Two Integers: " +product(num1,num2));
+      System.out.println("The Quotient of Two Integers: " +quotient(num1,num2));
+
+   }
+   public static void main (String [] args) 
+   {
+      Scanner scan = new Scanner(System.in);
+      System.out.println("First Integer:");
+      int num1 = scan.nextInt();
+      System.out.println("Second Integer:");
+      int num2 = scan.nextInt();
+
+      display(num1, num2);
+      
+   }
+}
