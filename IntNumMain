@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class IntNumMain {
+   public static void main(String[] args)
+   {
+      Scannner scan = new Scanner(System.in)
+      System.out.println("Input an Integer Number:");
+      int num = scan.nextInt();
+      
+      IntNum2.display();
+   }
+}
