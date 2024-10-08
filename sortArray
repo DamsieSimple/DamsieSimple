@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class ArrayMethods {
+    public static void main(String[] args) {
+        arrayScan();
+    }
+
+    public static void arrayScan() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("How many elements in the array?: ");
+        int numArray = scan.nextInt();
+        
+        int[] array = new int[numArray];
+
+        for (int i = 0; i < numArray; i++) {
+            System.out.println("Value [" + i + "] of Array: ");
+            array[i] = scan.nextInt();
+        }
+        
+        int sum = getTotal(array);
+        int evenCount = countEven(array);
+        int oddCount = countOdd(array);
+        sortArray(array);
+        
+        // Print results
+        System.out.println("The Sum of Array is " + sum);
+        System.out.println("The Number of Even Elements is " + evenCount);
+        System.out.println("The Number of Odd Elements is " + oddCount);
+        System.out.print("Sorted Array: ");
+        printArray(array);
+    }
+
+    public static int getTotal(int[] array) {
+        int sum = 0;
+        for (int value : array) {
+            sum += value;
+        }
+        return sum;
+    }
+
+    public static int countEven(int[] array) {
+        int evenCount = 0;
+        for (int value : array) {
+            if (value % 2 == 0)
+                evenCount++;
+        }
+        return evenCount;
+    }
+
+    public static int countOdd(int[] array) {
+        int oddCount = 0;
+        for (int value : array) {
+            if (value % 2 != 0) // Check for odd numbers
+                oddCount++;
+        }
+        return oddCount;
+    }
+
+    public static void sortArray(int[] array) {
+        // Simple bubble sort implementation
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if (array[j] > array[j + 1]) { // Swap if greater
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void printArray(int[] array) {
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
+        System.out.println(); // New line after printing the array
+    }
+}
